@@ -67,9 +67,31 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
- 
+ ```
+ #inclued <Servo.h>
 
+Serve myservo;
+int value;
+double angle;
 
+void setup()
+{
+  Serial.begin(9600);
+  myserveo.attach(9);
+}
+
+void loop()
+{
+  value = analogRead(A0)
+  angle = map(value, 0, 1023, 0, 100);
+  Serial.printin(angle);
+  myservo.write(angle);
+  delay(15);
+}
+```
+
+### OUTPUT:
+![OUTPUT](EX5.png)
 
 
 
